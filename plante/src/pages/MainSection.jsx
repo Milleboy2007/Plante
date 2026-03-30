@@ -1,12 +1,14 @@
 import './mainSection.css'
 import CardList from '../components/CardList'
 import Button from '../components/Button'
+import {test} from '../assets/donne'
 
-function MainSection(props){
+
+function MainSection(){
     return (
     <>
         <main>
-            <CardList cards={props.cards}/>
+            <CardList cards={test}/>
             <Button/>
         </main>
     </>
