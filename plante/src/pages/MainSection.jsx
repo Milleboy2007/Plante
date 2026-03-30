@@ -1,12 +1,12 @@
 import './mainSection.css'
-import CardList from './CardList'
-import Button from './Button'
+import CardList from '../components/CardList'
+import Button from '../components/Button'
 
 function MainSection(props){
     return (
     <>
         <main>
-            <CardList/>
+            <CardList cards={props.cards}/>
             <Button/>
         </main>
     </>
