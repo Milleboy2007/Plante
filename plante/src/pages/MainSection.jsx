@@ -10,16 +10,17 @@ function MainSection(){
     const [data, setData] = useState(null)
     const [isChanged, setIsChanged] = useState(false)
 
-    try{
-        useEffect(() =>{
+
+    useEffect(() =>{
+        try{
             fetch(`http://localhost:3001/api/data`, {method:"GET"})
                 .then(res => res.json())
                 .then(data => setData(data))
                 .then(console.log("API CALLED"))
-        }, [isChanged])
-    }catch(e){
-        console("API TRY")
-    }  
+        }catch(e){
+            console.log("GET FAIL")
+        }
+    }, [isChanged]) 
 
     useState(() => {setTimeout(() => setIsChanged(!isChanged), 60000)})
 

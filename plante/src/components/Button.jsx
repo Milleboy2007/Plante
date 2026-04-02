@@ -6,9 +6,13 @@ function Button(){
     const [isChanged, setIsChanged] = useState(false)
 
     useEffect(() =>{
-        fetch(`http://localhost:3001/api/pump`, {
-            method:'POST'
-        }).catch(console.log("POST FAIL"))
+        try{
+            fetch(`http://localhost:3001/api/pump`, {
+                method:'POST'
+            }).catch(console.log("POST FAIL"))
+        }catch{
+            console.log("POST FAIL")
+        }
     }, [isChanged])
 
     return (
