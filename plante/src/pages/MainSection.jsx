@@ -8,13 +8,25 @@ import { useEffect, useState } from 'react'
 function MainSection(){
 
     const [data, setData] = useState(null)
+    const [isChanged, setIsChanged] = useState(false)
 
-    useEffect(() =>{
-        fetch(`http://localhost:3001/api/data`)
-            .then(res => res.json())
-            .then(data => setData(data))
-            .then(console.log("API CALLED"))
-    }, [])
+    try{
+        useEffect(() =>{
+            fetch(`http://localhost:3001/api/data`)
+                .then(res => res.json())
+                .then(data => setData(data))
+                .then(console.log("API CALLED"))
+        }, [isChanged])
+    }catch(e){
+        console("API TRY")
+    }
+
+
+    useState(() => setTimeout(setIsChanged(!isChanged), 1000))
+
+    function tt(){
+        console.log("WORK")
+    }
 
     return (
     <>
