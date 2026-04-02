@@ -1,7 +1,6 @@
 import './mainSection.css'
 import CardList from '../components/CardList'
 import Button from '../components/Button'
-import {test} from '../assets/donne'
 import { useEffect, useState } from 'react'
 
 
@@ -27,7 +26,7 @@ function MainSection(){
     return (
     <>
         <main>
-            <CardList cards={test}/>
+            <CardList cards={data}/>
             <Button/>
         </main>
     </>
