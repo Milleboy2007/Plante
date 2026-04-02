@@ -1,4 +1,7 @@
 button{
     color: rgb(196, 248, 196);
-    padding: 2%;
+    padding: 1%;
+    background-color: forestgreen;
+    border-radius: 15px;
 }
+
