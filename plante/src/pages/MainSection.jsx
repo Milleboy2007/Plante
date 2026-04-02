@@ -26,7 +26,7 @@ function MainSection(){
     return (
     <>
         <main>
-            <CardList cards={data}/>
+            <CardList cards={test}/>
             <Button/>
         </main>
     </>
