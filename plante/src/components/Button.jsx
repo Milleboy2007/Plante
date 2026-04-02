@@ -1,9 +1,19 @@
+import { useEffect, useState } from 'react'
 import './button.css'
 
 function Button(){
+
+    const [isChanged, setIsChanged] = useState(false)
+
+    useEffect(() =>{
+        fetch(`http://localhost:3001/api/pump`, {
+            method:'POST'
+        }).catch(console.log("POST FAIL"))
+    }, [isChanged])
+
     return (
     <>
-        <button>Arroser la plante</button>
+        <button onClick={() => setIsChanged(!isChanged)}>Arroser la plante</button>
     </>
     )
 }

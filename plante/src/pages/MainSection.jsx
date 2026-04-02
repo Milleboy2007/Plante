@@ -12,26 +12,21 @@ function MainSection(){
 
     try{
         useEffect(() =>{
-            fetch(`http://localhost:3001/api/data`)
+            fetch(`http://localhost:3001/api/data`, {method:"GET"})
                 .then(res => res.json())
                 .then(data => setData(data))
                 .then(console.log("API CALLED"))
         }, [isChanged])
     }catch(e){
         console("API TRY")
-    }
+    }  
 
-
-    useState(() => setTimeout(setIsChanged(!isChanged), 1000))
-
-    function tt(){
-        console.log("WORK")
-    }
+    useState(() => {setTimeout(() => setIsChanged(!isChanged), 60000)})
 
     return (
     <>
         <main>
-            <CardList cards={test}/>
+            <CardList cards={data}/>
             <Button/>
         </main>
     </>
