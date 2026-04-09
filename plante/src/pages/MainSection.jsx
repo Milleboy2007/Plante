@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react'
 import './mainSection.css'
 import CardList from '../components/CardList'
 import Button from '../components/Button'
-import { useEffect, useState } from 'react'
 
 
 function MainSection(){

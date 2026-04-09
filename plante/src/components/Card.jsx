@@ -9,5 +9,5 @@ function Card(props){
     </div>
     )
 }
-// plante\src\images\hum.png
+
 export default Card
