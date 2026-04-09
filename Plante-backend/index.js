@@ -9,7 +9,7 @@ app.use(express.json());
 
 /******** SERIAL ********/
 const port = new SerialPort({
-  path: "COM3", // ⚠️ change this
+  path: "COM6", // ⚠️ change this
   baudRate: 9600,
 });
 

@@ -1,7 +1,7 @@
 /*********** PINS ***********/
-#define TEMP_HUM_PIN 13        // capteur DHT
+#define TEMP_HUM_PIN 4        // capteur DHT
 #define SOIL_PIN A0
-#define PUMP_PIN 3
+#define PUMP_PIN 8
 
 /*********** LIB ***********/
 #include <DHT.h>
@@ -90,6 +90,9 @@ void loop() {
 
     if (cmd == "PUMP_ON") {
       // TODO : activer la pompe pendant pumpMaxTime ms
+      digitalWrite(PUMP_PIN, HIGH);
+      delay(pumpMaxTime);
+      digitalWrite(PUMP_PIN, LOW);
     }
   }
 }

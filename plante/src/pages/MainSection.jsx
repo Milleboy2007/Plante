@@ -21,7 +21,9 @@ function MainSection(){
         }
     }, [isChanged]) 
 
-    useState(() => {setTimeout(() => setIsChanged(!isChanged), 60000)})
+    useEffect(() => {
+        setTimeout(() => setIsChanged(!isChanged), 60000)
+    }, [isChanged])
 
     return (
     <>
